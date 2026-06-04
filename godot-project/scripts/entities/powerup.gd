@@ -8,6 +8,8 @@ class_name Powerup
 
 @onready var hitbox : Area2D = $Area2D
 
+var dying : bool = false
+
 func _ready() -> void:
 	hitbox.area_entered.connect(on_collect)
 
@@ -21,6 +23,10 @@ func on_collect(area : Area2D) -> void:
 	pass
 
 func die() -> void:
+	if dying:
+		return
+	dying = true
+
 	particles.reparent(get_parent())
 	particles.finished.connect(particles.queue_free)
 	particles.emitting = true
