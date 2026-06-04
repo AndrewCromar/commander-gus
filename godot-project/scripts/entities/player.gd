@@ -1,6 +1,8 @@
 extends Area2D
 
 func _ready() -> void:
+	Global.reset()
+	
 	area_entered.connect(on_block)
 
 func on_block(area: Area2D) -> void:
