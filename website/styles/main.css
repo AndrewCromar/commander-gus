@@ -6,6 +6,10 @@ html, body {
     padding: 0;
 }
 
+img {
+    image-rendering: pixelated;
+}
+
 hr {
     background-color: #639bff;
 
