@@ -18,7 +18,7 @@ hr {
     background-color: #639bff;
 
     width: 100%;
-    height: 2px;
+    height: 0.2rem;
 
     border: none;
 }
@@ -56,7 +56,7 @@ hr {
     width: fit-content;
     height: 100vh;
 
-    border-left: solid #639bff 2px;
+    border-left: solid #639bff 0.2rem;
 
     overflow-y: auto;
 }
