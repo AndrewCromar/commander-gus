@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dopdfv2whuqy1" path="res://assets/ui/button.png" id="4_caprb"]
 [ext_resource type="Script" uid="uid://163m3t6bpsyw" path="res://scripts/ui/button_load_scene.gd" id="5_fosa6"]
 [ext_resource type="AudioStream" uid="uid://c8xsj8wtvov64" path="res://sounds/ui/button_hover.wav" id="6_emuhb"]
+[ext_resource type="Script" uid="uid://b1tjtcqofx7fm" path="res://scripts/ui/custom_button.gd" id="6_jq7is"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jq7is"]
 texture = ExtResource("4_caprb")
@@ -69,6 +70,8 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_jq7is")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_hi21p")
 theme_override_styles/hover = SubResource("StyleBoxTexture_caprb")
 text = "RESUME"
+script = ExtResource("6_jq7is")
+hover_sound = ExtResource("6_emuhb")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CenterContainer/VBoxContainer/ResumeButton" unique_id=1086157752]
 
