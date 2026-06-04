@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://chido44odpo73" path="res://scenes/game/enemy.tscn" id="4_kelw5"]
 [ext_resource type="Script" uid="uid://dp28g0oodrnje" path="res://scripts/spawners/spawner.gd" id="5_spwnr"]
 [ext_resource type="PackedScene" uid="uid://sefymul6gyje" path="res://scenes/powerups/fire_rate_powerup.tscn" id="6_pwrup"]
+[ext_resource type="PackedScene" uid="uid://dpco8nh5mlcep" path="res://scenes/ui/pause.tscn" id="7_bdhmt"]
 
 [node name="Game" type="Node2D" unique_id=633858300]
 
@@ -30,3 +31,6 @@ position = Vector2(-88, 34)
 
 [node name="Enemy3" parent="." unique_id=569420313 instance=ExtResource("4_kelw5")]
 position = Vector2(-139, 97)
+
+[node name="Pause" parent="." unique_id=1263409375 instance=ExtResource("7_bdhmt")]
+visible = false
