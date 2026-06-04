@@ -6,9 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dopdfv2whuqy1" path="res://assets/ui/button.png" id="4_8hxim"]
 [ext_resource type="Script" uid="uid://dgj6rbtb2oips" path="res://scripts/ui/label_score.gd" id="4_shdn4"]
 [ext_resource type="Script" uid="uid://163m3t6bpsyw" path="res://scripts/ui/button_load_scene.gd" id="5_shdn4"]
-[ext_resource type="PackedScene" uid="uid://vc5wpu0378ek" path="res://scenes/game/game.tscn" id="6_8hxim"]
 [ext_resource type="AudioStream" uid="uid://c8xsj8wtvov64" path="res://sounds/ui/button_hover.wav" id="6_sfejy"]
-[ext_resource type="PackedScene" uid="uid://bubfrp72qwc2r" path="res://scenes/ui/menu.tscn" id="8_adkiu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w6y0u"]
 texture = ExtResource("4_8hxim")
@@ -83,7 +81,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_cx0sj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ntye7")
 text = "RESTART"
 script = ExtResource("5_shdn4")
-scene = ExtResource("6_8hxim")
+scene = "res://scenes/game/game.tscn"
 hover_sound = ExtResource("6_sfejy")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CenterContainer/VBoxContainer/RestartButton" unique_id=1178759478]
@@ -101,7 +99,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_cx0sj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ntye7")
 text = "MENU"
 script = ExtResource("5_shdn4")
-scene = ExtResource("8_adkiu")
+scene = "res://scenes/ui/menu.tscn"
 hover_sound = ExtResource("6_sfejy")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CenterContainer/VBoxContainer/MenuButton" unique_id=1849341573]
