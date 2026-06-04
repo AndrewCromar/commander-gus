@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://sefymul6gyje" path="res://scenes/powerups/fire_rate_powerup.tscn" id="6_pwrup"]
 [ext_resource type="PackedScene" uid="uid://64hfw5exahve" path="res://scenes/powerups/spread_powerup.tscn" id="7_87uf6"]
 [ext_resource type="PackedScene" uid="uid://dpco8nh5mlcep" path="res://scenes/ui/pause.tscn" id="7_bdhmt"]
+[ext_resource type="PackedScene" uid="uid://v1xyhx1fuyr1" path="res://scenes/powerups/health_powerup.tscn" id="8_2a8rs"]
 
 [node name="Game" type="Node2D" unique_id=633858300]
 
@@ -21,7 +22,7 @@ entities = Array[PackedScene]([ExtResource("4_kelw5")])
 
 [node name="PowerupSpawner" type="Node2D" parent="." unique_id=162026599]
 script = ExtResource("5_spwnr")
-entities = Array[PackedScene]([ExtResource("6_pwrup"), ExtResource("7_87uf6")])
+entities = Array[PackedScene]([ExtResource("6_pwrup"), ExtResource("7_87uf6"), ExtResource("8_2a8rs")])
 spawn_rate = 30.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=944581485]
