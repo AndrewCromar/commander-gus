@@ -6,6 +6,10 @@ html, body {
     padding: 0;
 }
 
+a {
+    color: #639bff;
+}
+
 img {
     image-rendering: pixelated;
 }
@@ -30,12 +34,29 @@ hr {
 }
 
 .bluesky {
-    background-color: #242424;
-
     width: fit-content;
 
     text-align: left;
+}
 
-    border: solid #639bff 2px;
-    border-radius: 10px;
+.content {
+    display: flex;
+    flex-direction: row;
+
+    height: 100vh;
+}
+
+.content > div:first-child {
+    flex-grow: 1;
+}
+
+.content > div:last-child {
+    background-color: #242424;
+
+    width: fit-content;
+    height: 100vh;
+
+    border-left: solid #639bff 2px;
+
+    overflow-y: auto;
 }
