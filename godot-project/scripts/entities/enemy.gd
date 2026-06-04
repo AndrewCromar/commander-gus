@@ -5,7 +5,13 @@ extends MovingEntity
 @onready var particles : CPUParticles2D = $CPUParticles2D
 @onready var audio_player : AudioStreamPlayer2D = $AudioStreamPlayer2D
 
+var dying : bool = false
+
 func die() -> void:
+	if dying:
+		return
+	dying = true
+
 	particles.reparent(get_parent())
 	particles.finished.connect(particles.queue_free)
 	particles.emitting = true
