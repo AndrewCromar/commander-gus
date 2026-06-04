@@ -32,5 +32,7 @@ position = Vector2(-88, 34)
 [node name="Enemy3" parent="." unique_id=569420313 instance=ExtResource("4_kelw5")]
 position = Vector2(-139, 97)
 
-[node name="Pause" parent="." unique_id=1263409375 instance=ExtResource("7_bdhmt")]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=944581485]
+
+[node name="Pause" parent="CanvasLayer" unique_id=1263409375 instance=ExtResource("7_bdhmt")]
 visible = false
