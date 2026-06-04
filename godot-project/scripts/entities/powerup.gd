@@ -1,4 +1,5 @@
 extends MovingEntity
+class_name Powerup
 
 @export var die_sounds : Array[AudioStream] = []
 
@@ -17,9 +18,7 @@ func _ready() -> void:
 		end_position = Vector2(-position.x, position.y)
 
 func on_collect(area : Area2D) -> void:
-	if area.is_in_group("bullet"):
-		Global.FIRE_RATE /= 2
-		die()
+	pass
 
 func die() -> void:
 	particles.reparent(get_parent())

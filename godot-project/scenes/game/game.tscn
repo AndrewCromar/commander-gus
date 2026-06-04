@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://chido44odpo73" path="res://scenes/game/enemy.tscn" id="4_kelw5"]
 [ext_resource type="Script" uid="uid://dp28g0oodrnje" path="res://scripts/spawners/spawner.gd" id="5_spwnr"]
 [ext_resource type="PackedScene" uid="uid://sefymul6gyje" path="res://scenes/powerups/fire_rate_powerup.tscn" id="6_pwrup"]
+[ext_resource type="PackedScene" uid="uid://64hfw5exahve" path="res://scenes/powerups/spread_powerup.tscn" id="7_87uf6"]
 [ext_resource type="PackedScene" uid="uid://dpco8nh5mlcep" path="res://scenes/ui/pause.tscn" id="7_bdhmt"]
 
 [node name="Game" type="Node2D" unique_id=633858300]
@@ -20,17 +21,8 @@ entities = Array[PackedScene]([ExtResource("4_kelw5")])
 
 [node name="PowerupSpawner" type="Node2D" parent="." unique_id=162026599]
 script = ExtResource("5_spwnr")
-entities = Array[PackedScene]([ExtResource("6_pwrup")])
+entities = Array[PackedScene]([ExtResource("6_pwrup"), ExtResource("7_87uf6")])
 spawn_rate = 30.0
-
-[node name="Enemy" parent="." unique_id=1523481439 instance=ExtResource("4_kelw5")]
-position = Vector2(-207, -35)
-
-[node name="Enemy2" parent="." unique_id=1658830617 instance=ExtResource("4_kelw5")]
-position = Vector2(-88, 34)
-
-[node name="Enemy3" parent="." unique_id=569420313 instance=ExtResource("4_kelw5")]
-position = Vector2(-139, 97)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=944581485]
 

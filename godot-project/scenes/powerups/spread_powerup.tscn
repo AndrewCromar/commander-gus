@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://sefymul6gyje"]
+[gd_scene format=3 uid="uid://64hfw5exahve"]
 
-[ext_resource type="Script" uid="uid://bq4128uvd2i03" path="res://scripts/entities/powerup_fire_rate.gd" id="1_82gvn"]
-[ext_resource type="Texture2D" uid="uid://dgd0gk8tf5g4s" path="res://assets/sprites/increase_fire_rate.png" id="1_y28c8"]
-[ext_resource type="AudioStream" uid="uid://b65uej5nhhdgt" path="res://sounds/collect/pickupCoin.wav" id="2_y1l7q"]
+[ext_resource type="Script" uid="uid://cqbxng67ksy76" path="res://scripts/entities/powerup_spread.gd" id="1_ay8jc"]
+[ext_resource type="AudioStream" uid="uid://b65uej5nhhdgt" path="res://sounds/collect/pickupCoin.wav" id="2_1es03"]
+[ext_resource type="Texture2D" uid="uid://dua8186u1t17v" path="res://assets/sprites/bullet_spread.png" id="7_uewfx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wkhjp"]
 
@@ -10,12 +10,12 @@
 offsets = PackedFloat32Array(0, 0.029239766, 0.40350878, 1)
 colors = PackedColorArray(0.41568628, 0.74509805, 0.1882353, 0, 0.41568628, 0.74509805, 0.1882353, 1, 0.41568628, 0.74509805, 0.1882353, 1, 0.41568628, 0.74509805, 0.1882353, 0)
 
-[node name="FireRatePowerup" type="Node2D" unique_id=468250565]
-script = ExtResource("1_82gvn")
-die_sounds = Array[AudioStream]([ExtResource("2_y1l7q")])
+[node name="SpreadPowerup" type="Node2D" unique_id=468250565]
+script = ExtResource("1_ay8jc")
+die_sounds = Array[AudioStream]([ExtResource("2_1es03")])
 
 [node name="Graphic" type="Sprite2D" parent="." unique_id=81495406]
-texture = ExtResource("1_y28c8")
+texture = ExtResource("7_uewfx")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=890761516]
 
