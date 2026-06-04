@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://vc5wpu0378ek"]
+
+[ext_resource type="PackedScene" uid="uid://bcig2467um862" path="res://scenes/game/player.tscn" id="1_7h61r"]
+[ext_resource type="PackedScene" uid="uid://bihsvjfh61d60" path="res://scenes/game/camera.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://cku15rllf0hv" path="res://scripts/spawners/function_spawner.gd" id="3_0sr1o"]
+[ext_resource type="PackedScene" uid="uid://chido44odpo73" path="res://scenes/game/enemy.tscn" id="4_kelw5"]
+[ext_resource type="Script" uid="uid://dp28g0oodrnje" path="res://scripts/spawners/spawner.gd" id="5_spwnr"]
+[ext_resource type="PackedScene" uid="uid://sefymul6gyje" path="res://scenes/powerups/fire_rate_powerup.tscn" id="6_pwrup"]
+[ext_resource type="PackedScene" uid="uid://64hfw5exahve" path="res://scenes/powerups/spread_powerup.tscn" id="7_87uf6"]
+[ext_resource type="PackedScene" uid="uid://dpco8nh5mlcep" path="res://scenes/ui/pause.tscn" id="7_bdhmt"]
+[ext_resource type="PackedScene" uid="uid://v1xyhx1fuyr1" path="res://scenes/powerups/health_powerup.tscn" id="8_2a8rs"]
+
+[node name="Game" type="Node2D" unique_id=633858300]
+
+[node name="Player" parent="." unique_id=1767266398 instance=ExtResource("1_7h61r")]
+
+[node name="CameraContainer" parent="." unique_id=975301458 instance=ExtResource("1_uwrxv")]
+
+[node name="EnemySpawner" type="Node2D" parent="." unique_id=545243699]
+script = ExtResource("3_0sr1o")
+entities = Array[PackedScene]([ExtResource("4_kelw5")])
+
+[node name="PowerupSpawner" type="Node2D" parent="." unique_id=162026599]
+script = ExtResource("5_spwnr")
+entities = Array[PackedScene]([ExtResource("6_pwrup"), ExtResource("7_87uf6"), ExtResource("8_2a8rs")])
+spawn_rate = 30.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=944581485]
+
+[node name="Pause" parent="CanvasLayer" unique_id=1263409375 instance=ExtResource("7_bdhmt")]
+visible = false

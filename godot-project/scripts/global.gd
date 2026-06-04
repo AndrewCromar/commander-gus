@@ -1,9 +1,23 @@
 extends Node
 
-var score : int = 0
-var max_health : int = 3
-var health : int = max_health
-var fire_rate : float = 1
-var bullet_spread : int = 1
+var SCORE : int
 
-var paused : bool = false
+var starting_health : int = 3
+var HEALTH : int = starting_health
+
+var CAMERA_SHAKE_DURATION : float
+
+var starting_fire_rate : float = 1
+var FIRE_RATE : float = starting_fire_rate
+
+var starting_spread : int = 1
+var SPREAD : int = starting_spread
+
+func reset() -> void:
+	CAMERA_SHAKE_DURATION = 0
+	
+	SCORE = 0
+	HEALTH = starting_health
+	
+	FIRE_RATE = starting_fire_rate
+	SPREAD = starting_spread
